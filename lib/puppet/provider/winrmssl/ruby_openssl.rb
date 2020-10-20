@@ -232,7 +232,7 @@ Puppet::Type.type(:winrmssl).provide(:ruby_openssl) do
   end
 
   def certificatethumbprint=(var_param)
-    var_cmd = "winrm set winrm/config/listener?Address=*+Transport=HTTPS @{CertificateThumbprint=\"#{var_param}\"}"
+    var_cmd = "winrm set winrm/config/listener?Address=*+Transport=HTTPS @{Hostname=\"#{Facter['fqdn'].value}\";CertificateThumbprint=\"#{var_param}\"}"
     _, exitstatus = exec_call(var_cmd)
     exitstatus
   end
