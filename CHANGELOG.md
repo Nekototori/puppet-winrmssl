@@ -2,6 +2,11 @@
 
 All notable changes to this project will be documented in this file.
 
+## Release 2.0.2
+
+**Features**
+Added Puppet 7 support.
+
 ## Release 2.0.1
 
 **Bugfixes**
